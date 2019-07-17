@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Perspective Page View Navigation</title>
+		<meta name="description" content="Perspective Page View Navigation: Transforms the page in 3D to reveal a menu" />
+		<meta name="keywords" content="3d page, menu, navigation, mobile, perspective, css transform, web development, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="{% static "" %}../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="{% static "navigator/css/normalize.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "navigator/css/demo.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "navigator/css/component.css" %}" />
+        <link rel="icon" href="{% static "navigator/img/court.png" %}">
+        <!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
+		<script src="{% static "navigator/js/modernizr.custom.25376.js" %}/"></script>
+	</head>
+	<body>
+		<div id="perspective" class="perspective effect-airbnb">
+			<div class="container">
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+					<!-- Top Navigation -->
+					<header class="codrops-header">
+						<h1>中国文书裁判网爬虫数据web viewer</span></h1>
+					</header>
+					<div class="main clearfix">
+						<div class="column">
+							<p><button id="showMenu">展示!</button></p>
+							<p>首先选择右边灰色数据类型，其次点击展示按钮！</p>
+						</div>
+						<div class="column">
+							<nav class="codrops-demos">
+								<a href="main_judgement.html">文书详情页面</a>
+								<a href="data_summary.html">文书数据汇总</a>
+								<a href="download_dataset.html" class="current-demo">下载文书数据集</a>
+							</nav>
+						</div>
+						<div class="related">
+							<p>If you have any question, please contact me at:</p>
+							<p><a href="http://tympanus.net/Tutorials/AnimatedBorderMenus/">dengpan.yuan.cool@gmail.com</a></p>
+						</div>
+					</div><!-- /main -->
+				</div><!-- wrapper -->
+			</div><!-- /container -->
+			<nav class="outer-nav left vertical">
+				<a href="#" class="icon-home">污染环境责任纠纷.csv</a>
+				<a href="#" class="icon-news">相邻污染侵害纠纷.csv</a>
+				<a href="#" class="icon-image">污染环境.csv</a>
+				<a href="#" class="icon-upload">环境保护行政管理(环保).csv</a>
+				<a href="#" class="icon-star">重大环境污染事故.csv</a>
+	<!--
+				{# <a href="#" class="icon-mail">Messages</a>
+				<a href="#" class="icon-lock">Security</a>#} -->
+			</nav>
+		</div><!-- /perspective -->
+		<script src="{% static "navigator/js/classie.js" %}"></script>
+		<script src="{% static "navigator/js/menu.js" %}"></script>
+	</body>
+</html>
